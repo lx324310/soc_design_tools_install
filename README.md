@@ -4,11 +4,14 @@ Here is the steps
 #Automatic build
 1、prepare for build
   
-  $mkdir ~/openrisc-tool
+  $cd ~
   
-  $git clone 
-
-
+  $git clone https://github.com/lx324310/OpenRISC_Tool.git openrisc-tool
+  
+  $cd openrisc-tool
+  
+  $make install
+  
 #Manual build
 1、build a working directory
   
