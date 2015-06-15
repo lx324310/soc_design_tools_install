@@ -104,10 +104,13 @@ OR1Ksim is a simulator of openrisc,you can build you own OR1200 or SOC based on 
   $source ~/.bashrc
   
 #OpenRISC GNU Toolchain
-(OR32 or OR1K,OR32 is the older for OR1K,mkg-soc and minsoc is based on OR32 )
+(OR32 is the older for OR1K,mkg-soc and minsoc is based on OR32 )
 
 OR32 GNU toolchain install
 
+1、prepare for install 
+
+  $sudo apt-get -y install build-essential make gcc g++ flex bison patch texinfo libncurses5-dev libmpfr-dev libgmp3-dev libmpc-dev libzip-dev python-dev libexpat1-dev
 
 
 
