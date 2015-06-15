@@ -21,7 +21,7 @@ if you want to distclean all tools you can "make distclean"
 #OpenRISC debug tools install
 We can use OpenOCD or advance_jtag_bridge(software) to debug OpenRISC via advance_jtag_bridge(Hardware),however advance_jtag_bridge(S) download speed is very slow when i used on altera FPGA(4KB/S),xilinx FPGA(268B/s),yet OpenOCD download speed reach 54KB/s on altera FPGA. So i will to use OpenOCD,
 
-OpenOCD install
+#OpenOCD install
 
 1、preparing for install
   
@@ -47,7 +47,7 @@ OpenOCD install
 
 if your board type is xilinx FPGA you may choose adbg as your debug tool,Here is the steps for it's install
 
-Advance jtag bridge install
+#Advance jtag bridge install
 
 1、preparing for install
 
@@ -112,8 +112,18 @@ OR32 GNU toolchain install
 
   $sudo apt-get install libmpc-dev libgmp3-dev libmpfr-dev lzop libsdl1.2-dev xterm automake libtool
   
-2、
+2、Getting the Repo and install
+  
+  $cd ~/openrisc-tool
+  
+  $git clone https://github.com/lx324310/or32_gnu_stable.git
 
+  $cd or32_gnu_stable
+  
+  $./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
+
+
+  
 
 
 
