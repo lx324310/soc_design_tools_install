@@ -121,6 +121,8 @@ OR32 GNU toolchain install
   $cd or32_gnu_stable
   
   $./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
+  
+
 
 
   
