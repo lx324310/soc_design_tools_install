@@ -110,7 +110,9 @@ OR32 GNU toolchain install
 
 1、prepare for install 
 
-  $sudo apt-get -y install build-essential make gcc g++ flex bison patch texinfo libncurses5-dev libmpfr-dev libgmp3-dev libmpc-dev libzip-dev python-dev libexpat1-dev
+  $sudo apt-get install libmpc-dev libgmp3-dev libmpfr-dev lzop libsdl1.2-dev xterm automake libtool
+  
+2、
 
 
 
