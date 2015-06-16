@@ -1,7 +1,8 @@
-# OpenRISC_Tool 
+#SOC design learing tools install
+## OpenRISC_Tool 
 OpenRISC_Tool used for OpenRISC simulate，compile and debug, I have installed and tested in ubuntu 14.04 LTS(32bit) 
 Here is the steps 
-##Automatic build
+###Automatic build
 1、prepare for build
   
   $cd ~
@@ -13,15 +14,15 @@ Here is the steps
   $make install
 if you want to distclean all tools you can "make distclean"
   
-##Manual build
+###Manual build
 1、build a working directory
   
   $mkdir ~/openrisc-tool
   
-###OpenRISC debug tools install
+####OpenRISC debug tools install
 We can use OpenOCD or advance_jtag_bridge(software) to debug OpenRISC via advance_jtag_bridge(Hardware),however advance_jtag_bridge(S) download speed is very slow when i used on altera FPGA(4KB/S),xilinx FPGA(268B/s),yet OpenOCD download speed reach 54KB/s on altera FPGA. So i will to use OpenOCD,
 
-####OpenOCD install
+#####OpenOCD install
 
 1、preparing for install
   
@@ -47,7 +48,7 @@ We can use OpenOCD or advance_jtag_bridge(software) to debug OpenRISC via advanc
 
 if your board type is xilinx FPGA you may choose adbg as your debug tool,Here is the steps for it's install
 
-####Advance jtag bridge install
+#####Advance jtag bridge install
 
 1、preparing for install
 
@@ -71,7 +72,7 @@ if your board type is xilinx FPGA you may choose adbg as your debug tool,Here is
 
   $sudo make install
 
-###OR1ksim install
+####OR1ksim install
 OR1Ksim is a simulator of openrisc,you can build you own OR1200 or SOC based on OR1200
 (Pay attention,Before you install GNU toolchain you must install or1ksim)
   
@@ -103,7 +104,7 @@ OR1Ksim is a simulator of openrisc,you can build you own OR1200 or SOC based on 
   
   $source ~/.bashrc
   
-###OpenRISC GNU Toolchain
+####OpenRISC GNU Toolchain
 (OR32 is the older for OR1K,mkg-soc and minsoc is based on OR32 )
 
 OR32 GNU toolchain install
@@ -120,8 +121,9 @@ OR32 GNU toolchain install
 
   $cd or32_gnu_stable
   
-  $./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
+  $sudo ./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
   
+##EDA tools install 
 
 
 
