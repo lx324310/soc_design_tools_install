@@ -124,6 +124,40 @@ OR32 GNU toolchain install
   $sudo ./bld-all.sh --force --prefix /opt/openrisc --or1ksim-dir /opt/or1ksim --no-uclibc --no-or32-linux 
   
 ##EDA tools install 
+Eda tools include synthesize tool(xilinx ise or quartus),simulation tool(modelsim)
+In this README 
+###usb driver install
+
+1、xpc_usb
+
+when you plug xilinx usb cable in the compter,lsusb you will find ID:03fd:0013，it's mean not work
+
+solution:
+  
+  $sudo apt-get install gitk git-gui libusb-dev build-essential libc6-dev fxload
+  
+  $cd ~/eda_tool/xilinx  (eda_tool/xilinx is the install dir of xilinx ise)
+  
+  $sudo git clone git://git.zerfleddert.de/usb-driver
+  
+  $cd usb-driver/
+  
+  $sudo make 
+  
+  $./setup_pcusb ../14.2/ISE_DS/ISE/
+  
+2、Altera usb-blaster
+
+when you plug altera usb-blaster in the computer,you will find can't program altera FPGA.
+
+solution:
+  
+In the end of 80-usbblaster.rules,add       ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6001", MODE="666"
+
+  $sudo vim /etc/udev/rules.d/80-usbblaster.rules
+  
+
+  
 
 
 
